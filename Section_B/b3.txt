@@ -1,0 +1,9 @@
+
+(i)--> sales.isnull().sum().sum() 
+output: 1
+
+reason: first it will check is null for every value, sum for every key and then sum all the key_null values, resulting in total null values of sales.
+
+(ii) output: (6,5), it will remove the whole column where null is present. Hence it came from (6,6) to (6,5)
+
+(iii) # sales['units']=sales.fillna(sales['units'].median())
